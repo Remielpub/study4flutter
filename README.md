@@ -2,8 +2,9 @@
 《Flutter实战》第二版学习记录
 https://book.flutterchina.club/
 
-#Dart语法学习
-##与Java&Kotlin区别：
+# Dart语法学习
+
+## 与Java&Kotlin区别：
 >1.基本数据类型
 
 |  类型   |        Dart        |          Java           |       Kotlin       |

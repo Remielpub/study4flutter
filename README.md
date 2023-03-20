@@ -51,7 +51,7 @@ https://book.flutterchina.club/
 
 >语法区别
 
-![](/Users/msb/Desktop/20230316164610.jpg)
+![](./image/20230316164610.jpg)
 
 
 1.dart构造函数
@@ -85,13 +85,13 @@ https://book.flutterchina.club/
 * Dart中, 没有interface 接口关键字的定义，但是有implement。
 * implement 关键字使用，可以实现所有类：抽象类及普通类，需要实现类中所有定义的变量及方法,如下图所示
 
-<img src="/Users/msb/Desktop/20230320105025.jpg"/>
-<img src="/Users/msb/Desktop/20230320105132.jpg"/>
+![](./image/20230320105025.jpg)
+![](./image/20230320105132.jpg)
 
 与Java & Kotlin相同，一个类可以实现多个（接口）类。
 * 二义性解决：
 
-<img src="/Users/msb/Desktop/20230320155607.jpg"/>
+![](./image/20230320155607.jpg)
 
 当 C 类实现 A 、B 接口，必须强制覆为 所有 成员变量提供 get 方法,这点解决了二义性问题。
 
@@ -100,7 +100,7 @@ with & mixin 为Dart实现混入（mixins）的关键字，混入是指将一个
 目的：实现类功能扩展（可以同时混入多个）。比如Java & Kotlin 可以通过内部类的形式，来扩展类功能。混入类，没有构造方法，无法实例化，这
 是混入类与普通类最直接区别。
 
-<img src="/Users/msb/Desktop/20230320154919.jpg"/>
+![](./image/20230320154919.jpg)
 
 混入二义性解决：
 * 如C 以先A ，后B顺序混入两个类，A, B 中都含有一个变量名name的字符串，混入C后，打印字符串name，显示的为后混入B类中name的值。
@@ -112,12 +112,12 @@ with & mixin 为Dart实现混入（mixins）的关键字，混入是指将一个
 * 这个功能与Kotlin的扩展方法是类似的，都可以在不修改类文件的前提下，扩展类方法。
 * Kotlin不仅可以添加扩展方法，同时可以添加扩展变量。Dart只可以添加拓展方法。
 
-<img src="/Users/msb/Desktop/20230320164940.jpg"/>
+![](./image/20230320164940.jpg)
 
 5.on 关键字。
 * on关键字用于混入类间，实现类似extends的关系。即混入类也可以通过on 关键字 引入其他混入类的功能。例如：
 
-<img src="/Users/msb/Desktop/20230320162047.jpg"/>
+![](./image/20230320162047.jpg)
 
 * on 与 extension配合使用，表示对哪个类进行扩展
 

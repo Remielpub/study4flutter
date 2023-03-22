@@ -1,7 +1,9 @@
 
     class Test {
       void method() {
-        Person p = new Person();
+        Person p1 = Person();
+
+        Person p = Person();
         p.write();
       }
     }
@@ -63,28 +65,68 @@
 
       void run(){
         print("mixin keyword --- ${d}");
+        int x = 65;
+        print(x.toRadixString(2));
+
+        List<int> codes = [65, 66];
+        for (var element in codes) {
+          print(String.fromCharCode(element));
+        }
       }
     }
 
-    mixin E on D {
+    abstract class F {
+      void method1();
+    }
 
-      @override
-      set(String value) {
-        d = "hello world! E";
-      }
+    mixin E on F {
 
-      @override
-      void run() {
-        super.run();
-      }
+      // @override
+      // set(String value) {
+      //   // d = "hello world! E";
+      // }
+
     }
 
     extension StringUtil on String{
 
       bool isNullOrEmpty(String? str) {
+        print(str?.length);
+
+        String a = str ?? '';
+
+        str = "hello world";
+
+        str!.length;
         return str == null || str.isEmpty;
+        G g = G();
+        print(g.getA);
       }
 
     }
 
+    class G {
+      int _a = 0;
+      int get getA => _a;
 
+      set setA(int value) {
+        _a = value;
+      }
+    }
+
+    typedef Operate = int Function(int, int);
+
+class Test1 {
+
+   void method() {
+     Operate add = (a, b) {
+       return a + b;
+     };
+
+     add.call(10, 20);
+   }
+
+   void method1({required int a, int b = 0}) {
+
+   }
+}
